@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router"; // ✅ Next.js router
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function Login() {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -12,10 +12,10 @@ export default function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // 🔒 Simple mock authentication (replace with API later)
+    // 🔒 Simple mock authentication (replace with backend later)
     if (userId.trim() === "user123" && password === "password") {
       localStorage.setItem("userId", userId);
-      navigate("/tracker"); // Redirect after login
+      router.push("/tracker"); // ✅ Next.js navigation
     } else {
       setError("Invalid credentials. Try 'user123' / 'password'.");
     }
