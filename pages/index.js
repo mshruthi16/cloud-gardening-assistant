@@ -5,7 +5,7 @@ import FeaturedProducts from "../components/FeaturedProducts";
 import OurStory from "../components/OurStory";
 import OurOfferings from "../components/OurOfferings";
 import Footer from "../components/Footer"; 
-
+import Login from "./pages/Login";
 export default function Home() {
   return (
     <div>
