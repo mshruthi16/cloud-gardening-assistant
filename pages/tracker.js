@@ -7,7 +7,7 @@ import { Line } from "react-chartjs-2";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-const BASE_URL = "https://qvg4yd4mv7.execute-api.eu-north-1.amazonaws.com/prod";
+const BASE_URL = "https://1ljbmscwa4.execute-api.eu-north-1.amazonaws.com/dev/cloudbloom_backend";
 
 export default function Tracker() {
   const [categories] = useState([
